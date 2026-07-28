@@ -17,7 +17,7 @@ export default function TutorCard({ tutor }) {
           Available: {tutor.availableDays}, {tutor.availableTime}
         </p>
         <div className="flex items-center justify-between mt-3">
-          <span className="text-green-600 font-semibold">৳ {tutor.hourlyFee} / hour</span>
+          <span className="text-green-600 font-semibold">$ {tutor.hourlyFee} / hour</span>
         </div>
         <Link
           href={`/tutors/${tutor._id}`}

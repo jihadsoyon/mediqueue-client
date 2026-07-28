@@ -41,7 +41,7 @@ export default async function PopularTutors() {
               </h3>
               <p className="text-sm text-gray-500">{tutor.subject}</p>
               <p className="text-green-600 font-medium text-sm mt-1">
-                ৳ {tutor.hourlyFee} / hour
+                $ {tutor.hourlyFee} / hour
               </p>
               <Link
                 href={`/tutors/${tutor._id}`}
