@@ -5,6 +5,7 @@ import { useAuth } from "@/context/AuthContext";
 import { signOut } from "@/lib/auth-client";
 import ThemeToggle from "../shared/ThemeToggle";
 import { useState } from "react";
+import { clearTokenCache } from "@/lib/api";
 
 export default function Navbar() {
   const { user, loading } = useAuth();
@@ -66,7 +67,10 @@ export default function Navbar() {
                   Profile
                 </Link>
                 <button
-                  onClick={() => signOut()}
+                  onClick={() => {
+                    signOut();
+                    clearTokenCache();
+                  }}
                   className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-red-500"
                 >
                   Logout
