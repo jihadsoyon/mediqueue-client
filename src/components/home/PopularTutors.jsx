@@ -25,8 +25,8 @@ export default async function PopularTutors() {
       {tutors.length === 0 ? (
         <p className="text-gray-500">No tutors available yet.</p>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-          {tutors.map((tutor) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5">
+          {tutors.slice(0, 3).map((tutor) => (
             <div
               key={tutor._id}
               className="border dark:border-gray-700 rounded-xl p-4 text-center hover:shadow-lg transition"

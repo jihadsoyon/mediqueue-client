@@ -50,9 +50,12 @@ export default function RegisterPage() {
     );
   };
 
-  const handleGoogleRegister = async () => {
-    await signIn.social({ provider: "google", callbackURL: "/" });
-  };
+const handleGoogleRegister = async () => {
+  await signIn.social({
+    provider: "google",
+    callbackURL: `${process.env.NEXT_PUBLIC_CLIENT_URL}/`,
+  });
+};
 
   return (
     <div className="max-w-md mx-auto px-6 py-16">
