@@ -24,7 +24,7 @@ https://mediqueue-client-delta.vercel.app/
 
 ### ⚡ Server API
 
-https://mediqueue-server-vgar.onrender.com/
+https://medi-queue-server-three.vercel.app/
 
 ---
 
