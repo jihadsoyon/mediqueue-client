@@ -10,20 +10,50 @@ import { clearTokenCache } from "@/lib/api";
 export default function Navbar() {
   const { user, loading } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // মোবাইল মেনুর জন্য নতুন স্টেট
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); 
 
-  const publicLinks = (
+const publicLinks = (
     <>
-      <Link href="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-      <Link href="/tutors" onClick={() => setMobileMenuOpen(false)}>Tutors</Link>
+      <Link 
+        href="/" 
+        onClick={() => setMobileMenuOpen(false)}
+        className="text-gray-800 dark:text-gray-100 hover:text-green-600 transition-colors"
+      >
+        Home
+      </Link>
+      <Link 
+        href="/tutors" 
+        onClick={() => setMobileMenuOpen(false)}
+        className="text-gray-800 dark:text-gray-100 hover:text-green-600 transition-colors"
+      >
+        Tutors
+      </Link>
     </>
   );
 
   const privateLinks = (
     <>
-      <Link href="/add-tutor" onClick={() => setMobileMenuOpen(false)}>Add Tutor</Link>
-      <Link href="/my-tutors" onClick={() => setMobileMenuOpen(false)}>My Tutors</Link>
-      <Link href="/my-booked-sessions" onClick={() => setMobileMenuOpen(false)}>My Booked Sessions</Link>
+      <Link 
+        href="/add-tutor" 
+        onClick={() => setMobileMenuOpen(false)}
+        className="text-gray-800 dark:text-gray-100 hover:text-green-600 transition-colors"
+      >
+        Add Tutor
+      </Link>
+      <Link 
+        href="/my-tutors" 
+        onClick={() => setMobileMenuOpen(false)}
+        className="text-gray-800 dark:text-gray-100 hover:text-green-600 transition-colors"
+      >
+        My Tutors
+      </Link>
+      <Link 
+        href="/my-booked-sessions" 
+        onClick={() => setMobileMenuOpen(false)}
+        className="text-gray-800 dark:text-gray-100 hover:text-green-600 transition-colors"
+      >
+        My Booked Sessions
+      </Link>
     </>
   );
 
@@ -104,9 +134,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+   
+        {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-t dark:border-gray-800 shadow-md p-4 flex flex-col gap-4 z-40">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 shadow-lg p-5 flex flex-col gap-4 z-40 text-gray-800 dark:text-white">
           {publicLinks}
           {!loading && user && privateLinks}
         </div>
