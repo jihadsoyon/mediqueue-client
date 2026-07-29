@@ -234,11 +234,11 @@ JWT_SECRET=your_jwt_secret
 
 ### Client Repository
 
-https://github.com/your-github-username/mediqueue-client
+https://github.com/jihadsoyon/mediqueue-client/tree/main
 
 ### Server Repository
 
-https://github.com/your-github-username/mediqueue-server
+https://github.com/jihadsoyon/MediQueue-Server
 
 ---
 
