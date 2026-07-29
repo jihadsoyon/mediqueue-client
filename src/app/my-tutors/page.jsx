@@ -118,7 +118,7 @@ export default function MyTutorsPage() {
                   <input name="tutorName" defaultValue={editTutor.tutorName} required className="w-full border dark:border-gray-700 rounded-lg px-4 py-2 bg-transparent" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-1">Hourly Fee (৳)</label>
+                  <label className="block text-sm font-medium mb-1">Hourly Fee ($)</label>
                   <input name="hourlyFee" type="number" defaultValue={editTutor.hourlyFee} required className="w-full border dark:border-gray-700 rounded-lg px-4 py-2 bg-transparent" />
                 </div>
                 <div>

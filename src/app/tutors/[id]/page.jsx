@@ -48,7 +48,7 @@ export default function TutorDetailsPage() {
             </h1>
             <p className="text-green-600 font-medium mt-1">{tutor.subject}</p>
             <p className="text-2xl font-bold text-gray-800 dark:text-white mt-3">
-              ৳ {tutor.hourlyFee} / hour
+              $ {tutor.hourlyFee} / hour
             </p>
 
             <div className="grid grid-cols-2 gap-4 mt-6 text-sm">
