@@ -1,36 +1,261 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 MediQueue – Tutor Booking System
 
-## Getting Started
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16-black?logo=next.js" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react" />
+  <img src="https://img.shields.io/badge/Express.js-5-000000?logo=express" />
+  <img src="https://img.shields.io/badge/MongoDB%20Atlas-Database-47A248?logo=mongodb" />
+  <img src="https://img.shields.io/badge/Better%20Auth-Authentication-blue" />
+  <img src="https://img.shields.io/badge/JWT-Secure%20API-red" />
+  <img src="https://img.shields.io/badge/TailwindCSS-v4-38B2AC?logo=tailwind-css" />
+</p>
 
-First, run the development server:
+<p align="center">
+A modern Tutor Booking Platform built with <strong>Next.js, Better Auth, Express.js, MongoDB Atlas, and JWT</strong>.
+</p>
+
+---
+
+# 🌐 Live Demo
+
+### 🚀 Live Website
+
+https://mediqueue-client-delta.vercel.app/
+
+### ⚡ Server API
+
+https://mediqueue-server-vgar.onrender.com/
+
+---
+
+# 📖 Project Overview
+
+**MediQueue** is a full-stack tutor booking platform that helps students discover tutors, view tutor details, and reserve learning sessions online.
+
+Tutors can publish their availability while students can securely book sessions without scheduling conflicts. The application uses **Better Auth** for authentication and **JWT** to secure private API routes, ensuring a safe and seamless user experience.
+
+---
+
+# ✨ Key Features
+
+- 🔐 Secure authentication using **Better Auth** (Email/Password & Google Sign-In)
+- 🔑 JWT-based authorization for protected API routes
+- 👨‍🏫 Tutors can create, update, and delete their own tutor listings
+- 📚 Students can browse tutors and book learning sessions
+- 📉 Automatically decreases available slots after each successful booking
+- 🚫 Prevents booking when no slots remain
+- 📅 Booking is restricted until the tutor's session date arrives
+- 🔍 Search tutors by name using MongoDB Regex search
+- 📆 Filter tutors by registration date
+- 🌙 Dark / Light theme support
+- 🔔 Beautiful toast notifications for all CRUD operations
+- ⚡ Responsive design for Mobile, Tablet, and Desktop
+- ⏳ Loading spinner, custom 404 page, and dynamic page titles
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- Next.js 16
+- React 19
+- Tailwind CSS v4
+- HeroUI
+- Better Auth Client
+- Axios
+- React Hot Toast
+- React DatePicker
+- React Icons
+- Framer Motion
+- Swiper.js
+
+---
+
+## Backend
+
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Better Auth
+- MongoDB Adapter
+- JWT (jsonwebtoken)
+- JOSE
+- Cookie Parser
+- CORS
+- dotenv
+
+---
+
+# 🔒 Authentication & Security
+
+- Better Auth Authentication
+- Email & Password Login
+- Google Login
+- JWT Token Generation
+- Protected Routes
+- Secure Cookie Authentication
+- Persistent User Session
+
+---
+
+# 📄 Main Pages
+
+- 🏠 Home
+- 📚 Tutors
+- 👨‍🏫 Tutor Details
+- ➕ Add Tutor
+- 📋 My Tutors
+- 📖 My Booked Sessions
+- 👤 Profile
+- 🔑 Login
+- 📝 Register
+- ❌ 404 Not Found
+
+---
+
+# ⚙️ Installation
+
+## Clone Client
+
+```bash
+git clone https://github.com/your-username/mediqueue-client.git
+```
+
+```bash
+cd mediqueue-client
+```
+
+```bash
+npm install
+```
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Clone Server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/your-username/mediqueue-server.git
+```
 
-## Learn More
+```bash
+cd mediqueue-server
+```
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# 🔑 Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Client (.env.local)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+NEXT_PUBLIC_SERVER_URL=http://localhost:5000
+
+NEXT_PUBLIC_CLIENT_URL=http://localhost:3000
+
+```
+
+---
+
+## Server (.env)
+
+```env
+PORT=5000
+
+MONGODB_URI=your_mongodb_atlas_uri
+
+BETTER_AUTH_SECRET=your_secret
+
+BETTER_AUTH_URL=http://localhost:5000
+
+JWT_SECRET=your_jwt_secret
+
+```
+
+---
+
+# 🚀 Deployment
+
+### Client
+
+- Vercel
+
+### Server
+
+- Render
+
+### Database
+
+- MongoDB Atlas
+
+---
+
+# 📦 NPM Packages Used
+
+### Client
+
+- Next.js
+- React
+- Better Auth
+- HeroUI
+- Axios
+- Swiper
+- Framer Motion
+- React Hot Toast
+- React DatePicker
+
+### Server
+
+- Express.js
+- MongoDB
+- Better Auth
+- Mongo Adapter
+- jsonwebtoken
+- jose
+- cookie-parser
+- cors
+- dotenv
+
+---
+
+# 📂 Repositories
+
+### Client Repository
+
+https://github.com/jihadsoyon/mediqueue-client/tree/main
+
+### Server Repository
+
+https://github.com/jihadsoyon/MediQueue-Server
+
+---
+
+# 👨‍💻 Developer
+
+### Jihad Soyon
+
+GitHub
+
+https://github.com/jihadsoyon
+
+Portfolio
+
+https://jihad-soyon.netlify.app/
+
+---
+
+# ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
